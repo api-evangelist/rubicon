@@ -1,0 +1,62 @@
+aid: rubicon
+url: https://raw.githubusercontent.com/api-evangelist/rubicon/refs/heads/main/apis.yml
+name: Rubicon
+kind: company
+description: >-
+  Rubicon (formerly NYSE: RBT) is a waste, recycling, and sustainability
+  technology company founded in 2008. It went public in 2022 via a SPAC
+  merger with Founder SPAC at a pro forma valuation of roughly $1.7 billion,
+  branding itself a "digital challenger" to the traditional waste-hauling
+  industry with a marketplace connecting waste generators to independent
+  haulers plus the RUBICONSmartCity fleet-and-routing platform used by more
+  than 70 municipalities. Operating Status: the company subsequently faced
+  severe financial distress - layoffs and debt restructuring in 2023, a June
+  2024 NYSE delisting, and a May 2024 divestiture of its entire fleet
+  technology and smart-city business unit (RUBICONSmartCity, RUBICONPro,
+  RUBICONPremier) to Rodina Capital for roughly $68 million plus a possible
+  $12 million earnout; those assets were subsequently absorbed by Routeware.
+  In early 2025 Rubicon deregistered its securities and became a privately
+  held company, majority-owned by Jose Miguel Enrich through MBI Holdings,
+  and remains the subject of shareholder litigation over the change-of-control
+  terms. The surviving company operates as a smaller enterprise waste
+  brokerage and sustainability-data business built around the RUBICONConnect
+  platform (service, equipment, pickup, and cost visibility for enterprise
+  customers such as Chipotle and FedEx), alongside RUBICONRegWatch compliance
+  tooling, sustainability reporting, technical advisory services, and the
+  Rubicon Now on-demand dumpster-rental service in a handful of cities.
+  rubicon.com publishes no developer portal, no public API reference, and no
+  OpenAPI specification. The only discoverable API artifact tied to the
+  rubicon.com domain is a "Routeware Smartcity Public Api" Swagger UI hosted
+  at a dev subdomain (haulerpublic-api.dev.aws.rubicon.com) - leftover
+  infrastructure from the divested fleet/smart-city business - which returned
+  a 503 Service Unavailable on every check during this review and is not
+  publicly documented or reachable. Any hauler or municipal system
+  integration Rubicon references (for example, connecting to city 311
+  systems) is negotiated per partner and gated behind sales and onboarding
+  rather than exposed through self-serve developer documentation. Pricing
+  across RUBICONConnect and Rubicon's enterprise services is entirely
+  quote-based and negotiated per contract; no public pricing, tiers, or rate
+  limits are published. This entry is maintained as an honest stub pending
+  any future public API surface.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Waste Management
+- Recycling
+- Sustainability
+- Circular Economy
+- Fleet Management
+- Smart City
+- Enterprise
+- Gated API
+created: '2026-07-03'
+modified: '2026-07-03'
+specificationVersion: '0.19'
+apis: []
+common:
+- type: LinkedIn
+  url: https://www.linkedin.com/company/rubicon-global
+- type: Website
+  url: https://www.rubicon.com
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

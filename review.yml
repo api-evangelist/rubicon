@@ -1,0 +1,122 @@
+aid: rubicon
+name: Rubicon
+review:
+  question: Does Rubicon expose a documented public WebSocket API?
+  answer: false
+  date: '2026-07-03'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was authored. Rubicon publishes no public API of any
+    kind - REST, GraphQL, or WebSocket - so there is no server-push transport
+    on Rubicon's own surface to model. The one API artifact discoverable on a
+    rubicon.com subdomain (a Swagger/OpenAPI UI for a "Routeware Smartcity
+    Public Api") is inactive (HTTP 503) and, per the operating-status
+    findings below, belongs to a business unit Rubicon divested in May 2024,
+    not to the current company.
+findings:
+  summary: |
+    Rubicon does not publish a documented public WebSocket API, nor any
+    other public, self-serve developer API. rubicon.com has no developer
+    portal, no API reference documentation, and no published OpenAPI
+    specification. Any system integration Rubicon references publicly (e.g.
+    connecting RUBICONSmartCity-era fleet technology to a city's 311 system)
+    is described as a negotiated, per-partner integration handled through
+    sales and onboarding rather than a self-serve API program. This entry is
+    maintained as an honest stub: apis.yml lists apis: [] and no
+    openapi/plans/rate-limits/finops/collections artifacts were created,
+    since there is no real endpoint surface to source them from.
+  operatingStatus: |
+    Rubicon went public on NYSE (ticker RBT) in 2022 via a SPAC merger with
+    Founder SPAC (~$1.7B pro forma valuation, ~$196.8M raised). It faced
+    severe financial distress afterward: layoffs and debt restructuring in
+    2023, and in May 2024 it divested its entire fleet-technology and
+    smart-city business unit (RUBICONSmartCity, RUBICONPro, RUBICONPremier)
+    to Rodina Capital for ~$68M plus a possible $12M earnout; those assets
+    were subsequently absorbed by Routeware. Rubicon was delisted from NYSE
+    in June 2024, and in early 2025 it deregistered its securities and
+    became privately held, majority-owned by Jose Miguel Enrich via MBI
+    Holdings. Shareholder litigation over the change-of-control terms (seeking
+    $330M+) is ongoing. The company continues to operate today as a smaller,
+    privately held enterprise waste-brokerage and sustainability-data
+    business centered on the RUBICONConnect platform.
+  gatedApiEvidence: |
+    A Swagger UI titled "Routeware Smartcity Public Api" resolves at
+    https://haulerpublic-api.dev.aws.rubicon.com/swagger/index.html - a dev
+    subdomain of rubicon.com. This is very likely residual infrastructure
+    from the fleet-technology/smart-city business divested to Rodina Capital
+    / Routeware in May 2024. It returned HTTP 503 Service Unavailable on
+    every check performed during this review (browser fetch and direct curl,
+    both to /swagger/index.html and /swagger/v1/swagger.json), and is not
+    documented or reachable for public/self-serve use.
+  transports:
+    - protocol: REST
+      scheme: https
+      documented: false
+      note: No public REST API or developer documentation is published on rubicon.com.
+    - protocol: REST
+      scheme: https
+      documented: false
+      note: >-
+        haulerpublic-api.dev.aws.rubicon.com/swagger exposes a "Routeware
+        Smartcity Public Api" title but returns HTTP 503 on every attempt;
+        treated as inactive/legacy infrastructure from a divested business
+        unit, not a current Rubicon public API.
+    - protocol: Webhook
+      scheme: https
+      documented: false
+      note: No webhook mechanism is documented anywhere on rubicon.com.
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket endpoint is documented anywhere on rubicon.com or its subdomains as of the review date.
+  endpointsConfirmedRest: []
+  endpointsModeled: []
+sources:
+  - url: https://www.rubicon.com/
+    type: Website
+    note: No developer portal, API, or integration documentation surfaced on the marketing site.
+  - url: https://www.rubicon.com/connect/
+    type: Product
+    note: RUBICONConnect enterprise platform description; returned 404 on direct fetch during review, confirmed via cached search summary instead.
+  - url: https://www.rubicon.com/haulers/technologies/
+    type: Product
+    note: Describes RUBICONPro fleet dashboards, in-cab app, and telematics pod; no API/developer mention.
+  - url: https://haulerpublic-api.dev.aws.rubicon.com/swagger/index.html
+    type: APIReference
+    note: >-
+      "Routeware Smartcity Public Api" Swagger UI on a rubicon.com dev
+      subdomain; returned HTTP 503 on every check.
+  - url: https://www.wastedive.com/news/rubicon-founder-spac-public-digital-waste-recycling/611637/
+    type: News
+    note: 2022 SPAC merger announcement and valuation.
+  - url: https://www.rubicon.com/news/rubicon-technologies-receives-delisting-notice-from-the-new-york-stock-exchange/
+    type: News
+    note: June 2024 NYSE delisting notice.
+  - url: https://www.wastedive.com/news/rubicon-sale-fleet-technology-smart-cities-andres-chico-rodina/715352/
+    type: News
+    note: May 2024 sale of fleet-technology/smart-city business unit to Rodina Capital; terms and retained business described.
+  - url: https://www.wastedive.com/news/rubicon-rbt-take-private-deal-jose-miguel-enrich/710429/
+    type: News
+    note: Jose Miguel Enrich / MBI Holdings take-private transaction.
+  - url: https://www.wastedive.com/news/rubicon-tra-shareholder-letter-early-termination-payment/739821/
+    type: News
+    note: Shareholder litigation over change-of-control terms.
+  - url: https://www.wastedive.com/news/rubicon-technologies-layoffs-cost-cutting-debt/636960/
+    type: News
+    note: 2023 layoffs and debt restructuring.
+  - url: https://www.linkedin.com/company/rubicon-global
+    type: LinkedIn
+    note: Current company LinkedIn page, ~28.7k followers, Environmental Services industry.
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    No public API surface exists on Rubicon's own domain to document or
+    model, and no WebSocket/server-push transport exists to justify an
+    AsyncAPI document. apis.yml records apis: [] and this repository omits
+    openapi/plans/rate-limits/finops/collections artifacts rather than
+    fabricate endpoints, pricing tiers, or limits that are not publicly
+    sourced. Should Rubicon (or Routeware, as successor to the divested
+    fleet/smart-city business) publish real developer documentation in the
+    future, this entry should be revisited.
