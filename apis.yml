@@ -53,10 +53,14 @@ modified: '2026-07-03'
 specificationVersion: '0.19'
 apis: []
 common:
+- type: DomainSecurity
+  url: security/rubicon-domain-security.yml
 - type: LinkedIn
   url: https://www.linkedin.com/company/rubicon-global
 - type: Website
   url: https://www.rubicon.com
+- type: Blog
+  url: https://www.rubicon.com/feed/
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
