@@ -1,5 +1,8 @@
 aid: rubicon
 url: https://raw.githubusercontent.com/api-evangelist/rubicon/refs/heads/main/apis.yml
+x-api-posture: docs-gated
+x-api-posture-basis: observed
+x-api-posture-note: "The surviving company operates as a smaller enterprise waste brokerage and sustainability-data business built around the RUBICONConnect platform (service, equipment, pickup, and cost visibility for en"
 name: Rubicon
 kind: company
 description: >-
