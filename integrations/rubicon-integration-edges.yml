@@ -1,0 +1,25 @@
+generated: '2026-10-13'
+method: searched
+checked:
+- https://aws.amazon.com/marketplace/
+marketplace_apps: []
+edges:
+- partner_name: AWS Marketplace
+  partner: amazon-web-services
+  partner_match: aggregator
+  type: marketplace
+  marketplace: aws-marketplace
+  channel: distribution
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://aws.amazon.com/marketplace/seller-profile?id=92780b45-d0bc-4a8e-a4a1-c3e397c99216
+  listing_count: 5
+  apps:
+  - RUBICONSmartCity
+  - RUBICONSmartCity (1 - 20,000 Locations)
+  - RUBICONSmartCity (50,001 - 100,000 Locations)
+  - RUBICONSmartCity (20,001 - 50,000 Locations)
+  - RUBICONSmartCity (100,000+ Locations)
+  seller_name: Rubicon
+  detected_by: sweep-cloud-marketplaces.py
+  detected: '2026-10-13'
